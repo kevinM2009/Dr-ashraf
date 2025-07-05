@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Your Appointment</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #d32f2f;
+        --secondary: #ffffff;
+        --accent: #1976d2;
+        --bg: #f5f7fa;
+        --text: #222;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
+      .appointment-container {
+        background: #fff;
+        max-width: 480px;
+        margin: 3rem auto 2rem auto;
+        padding: 2.5rem 2rem 2rem 2rem;
+        border-radius: 1.2rem;
+        box-shadow: 0 2px 16px rgba(211,47,47,0.08);
+      }
+      .appointment-container h1 {
+        color: var(--primary);
+        font-size: 2rem;
+        margin-bottom: 0.7rem;
+        text-align: center;
+        font-weight: 700;
+      }
+      .appointment-container p {
+        color: #444;
+        font-size: 1.08rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      form#appointmentForm > div {
+        margin-bottom: 1.2rem;
+      }
+      label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+        color: var(--accent);
+        letter-spacing: 0.2px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="time"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border: 1.5px solid #e0e0e0;
+        border-radius: 0.7rem;
+        font-size: 1rem;
+        background: #f9f9fb;
+        color: var(--text);
+        transition: border 0.2s;
+        font-family: inherit;
+        resize: none;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--primary);
+        outline: none;
+        background: #fff;
+      }
+      textarea {
+        min-height: 80px;
+        max-height: 200px;
+      }
+      .btn {
+        display: block;
+        width: 100%;
+        background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+        color: var(--secondary);
+        border: none;
+        border-radius: 2rem;
+        padding: 0.9rem 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        box-shadow: 0 2px 8px rgba(211,47,47,0.10);
+        transition: background 0.2s, color 0.2s;
+      }
+      .btn:hover,
+      .btn:focus {
+        background: linear-gradient(90deg, var(--accent) 60%, var(--primary) 100%);
+        color: #fff;
+      }
+      .success-message {
+        display: none;
+        margin-top: 1.5rem;
+        background: #e3f2fd;
+        color: var(--primary);
+        border-left: 4px solid var(--accent);
+        padding: 1rem 1.2rem;
+        border-radius: 0.7rem;
+        font-size: 1.08rem;
+        text-align: center;
+        font-weight: 500;
+      }
+      @media (max-width: 600px) {
+        .appointment-container {
+          padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        }
+        .appointment-container h1 {
+          font-size: 1.4rem;
+        }
+      }
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(90deg, #d32f2f 60%, #1976d2 100%);
+        box-shadow: 0 2px 8px rgba(211,47,47,0.08);
+        border-radius: 0 0 1.2rem 1.2rem;
+        margin-bottom: 2rem;
+      }.navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(90deg, #d32f2f 60%, #1976d2 100%);
+        box-shadow: 0 2px 8px rgba(211,47,47,0.08);
+        border-radius: 0 0 1.2rem 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+        margin: 0;
+        padding: 0.8rem 0;
+    }
+    .navbar li {
+        display: block;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.08rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        padding: 0.5rem 1.2rem;
+        border-radius: 2rem;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        position: relative;
+        z-index: 1;
+    }
+    .navbar a:hover,
+    .navbar a:focus {
+        background: #ffe082;
+        color: #d32f2f;
+        box-shadow: 0 2px 12px rgba(25,118,210,0.10);
+        outline: none;
+    }
+    @media (max-width: 700px) {
+        .navbar ul {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .navbar {
+            border-radius: 0 0 0.7rem 0.7rem;
+            margin-bottom: 1rem;
+        }
+    }
+       
+    </style>
+   
+    </style>
+</head>
+<body>
+     <nav class="navbar">
+        <ul>
+            <li><a href="dr ashrafd clinic.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+           
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+    <div class="appointment-container">
+        <h1>Book an Appointment</h1>
+        <p>Schedule your visit with ease. Fill out the form below and we'll confirm your appointment soon!</p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd4_Ys8yNPz_fag7SO6x_ejlHllkQzB8SN71wfIE4bN3MhBjw/viewform?usp=dialog" width="400" height="2000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        
+    </div>
+</body>
+</html>

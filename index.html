@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ashraf D Clinic - Heart Specialist</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d32f2f;
+            --secondary: #ffffff;
+            --accent: #1976d2;
+            --bg: #f5f7fa;
+            --text: #222;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+            color: var(--secondary);
+            padding: 2rem 0 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(90deg, #d32f2f 60%, #1976d2 100%);
+        box-shadow: 0 2px 8px rgba(211,47,47,0.08);
+        border-radius: 0 0 1.2rem 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+        margin: 0;
+        padding: 0.8rem 0;
+    }
+    .navbar li {
+        display: block;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.08rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        padding: 0.5rem 1.2rem;
+        border-radius: 2rem;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        position: relative;
+        z-index: 1;
+    }
+    .navbar a:hover,
+    .navbar a:focus {
+        background: #ffe082;
+        color: #d32f2f;
+        box-shadow: 0 2px 12px rgba(25,118,210,0.10);
+        outline: none;
+    }
+    @media (max-width: 700px) {
+        .navbar ul {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .navbar {
+            border-radius: 0 0 0.7rem 0.7rem;
+            margin-bottom: 1rem;
+        }
+    }
+        
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1rem 2rem 1rem;
+            background: #fff;
+            box-shadow: 0 2px 16px rgba(211,47,47,0.05);
+            border-radius: 1.5rem;
+            margin: 2rem auto 1.5rem auto;
+            max-width: 1100px;
+        }
+        .hero-text {
+            flex: 1 1 350px;
+            padding: 1.5rem;
+        }
+        .hero-text h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-text a {
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 0.8rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(211,47,47,0.15);
+            transition: background 0.2s;
+        }
+        .hero-text a:hover {
+            background: var(--accent);
+        }
+        .hero-img {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+        .hero-img img {
+            max-width: 320px;
+            width: 90%;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(25,118,210,0.10);
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 1100px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(25,118,210,0.07);
+            padding: 2rem 1.5rem;
+            flex: 1 1 260px;
+            min-width: 260px;
+            max-width: 340px;
+            text-align: center;
+        }
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .feature-card h3 {
+            color: var(--accent);
+            margin-bottom: 0.7rem;
+            font-size: 1.2rem;
+        }
+        .feature-card p {
+            font-size: 1rem;
+            color: #444;
+        }
+        .cta {
+            background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+            color: var(--secondary);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-radius: 1.5rem;
+            margin: 2rem auto;
+            max-width: 900px;
+        }
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .cta a {
+            display: inline-block;
+            margin-top: 1rem;
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 0.8rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(255,255,255,0.10);
+            transition: background 0.2s, color 0.2s;
+        }
+        .cta a:hover {
+            background: var(--accent);
+            color: var(--secondary);
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem 0;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 900px) {
+            .hero, .features {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-img {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Dr. Ashraf wasfy Heart Clinic</h1>
+        <p>Your Heart, Our Priority – Expert Cardiac Care</p>
+         <nav class="navbar">
+       
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="dr ashrafd clinic.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+           
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav> <section class="hero">
+        <div class="hero-text">
+            <h2>Welcome to Dr. Ashraf D Clinic</h2>
+            <p>
+                Providing compassionate, state-of-the-art heart care for you and your loved ones. Our clinic combines advanced technology with personalized attention to ensure your heart health is in the best hands.
+            </p>
+            <a href="appointment.html">Book Appointment</a>
+        </div>
+        <div class="hero-img">
+            <img src="https://images.unsplash.com/photo-1511174511562-5f97f4f4e0c8?auto=format&fit=crop&w=600&q=80" alt="Heart Doctor Clinic">
+        </div>
+    </section>
+    <section class="features">
+        <div class="feature-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Comprehensive Cardiac Care</h3>
+            <p>
+                From diagnosis to treatment, we offer a full range of heart care services tailored to your needs.
+            </p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-user-md"></i>
+            <h3>Experienced Cardiologist</h3>
+            <p>
+                Dr. Ashraf D brings years of expertise and a patient-centered approach to every consultation.
+            </p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-stethoscope"></i>
+            <h3>Modern Facilities</h3>
+            <p>
+                Our clinic is equipped with the latest technology for accurate diagnosis and effective treatment.
+            </p>
+        </div>
+    </section>
+    <section class="cta">
+        <h2>Take the First Step Towards a Healthy Heart</h2>
+        <p>Schedule your consultation today and experience the best in cardiac care.</p>
+        <a href="appointment.html">Book Now</a>
+    </section>
+    <footer>
+        &copy;  All rights reserved.
+    </footer>
+</body>
+</html>

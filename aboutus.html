@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | HeartCare Clinic</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #d32f2f;
+            color: #fff;
+            padding: 30px 0 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(211,47,47,0.08);
+            padding: 40px 30px;
+        }
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        .about-text {
+            flex: 2;
+        }
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        .about-image img {
+            width: 180px;
+            border-radius: 50%;
+            border: 6px solid #d32f2f;
+            background: #fff;
+        }
+        h2 {
+            color: #d32f2f;
+            margin-top: 0;
+        }
+        .values {
+            margin-top: 30px;
+        }
+        .values ul {
+            list-style: none;
+            padding: 0;
+        }
+        .values li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+        }
+        .values li::before {
+            content: "♥";
+            color: #d32f2f;
+            position: absolute;
+            left: 0;
+            font-size: 1.1em;
+        }
+        @media (max-width: 700px) {
+            .about-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .container {
+                padding: 20px 10px;
+            }
+        } nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+         :root {
+            --primary: #d32f2f;
+            --secondary: #ffffff;
+            --accent: #1976d2;
+            --bg: #f5f7fa;
+            --text: #222;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+            color: var(--secondary);
+            padding: 2rem 0 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        nav {
+            margin-top: 1.5rem;
+        }
+        nav a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #ffe082;
+        }
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1rem 2rem 1rem;
+            background: #fff;
+            box-shadow: 0 2px 16px rgba(211,47,47,0.05);
+            border-radius: 1.5rem;
+            margin: 2rem auto 1.5rem auto;
+            max-width: 1100px;
+        }
+        .hero-text {
+            flex: 1 1 350px;
+            padding: 1.5rem;
+        }
+        .hero-text h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-text a {
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 0.8rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(211,47,47,0.15);
+            transition: background 0.2s;
+        }
+        .hero-text a:hover {
+            background: var(--accent);
+        }
+        .hero-img {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+        .hero-img img {
+            max-width: 320px;
+            width: 90%;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(25,118,210,0.10);
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 1100px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(25,118,210,0.07);
+            padding: 2rem 1.5rem;
+            flex: 1 1 260px;
+            min-width: 260px;
+            max-width: 340px;
+            text-align: center;
+        }
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .feature-card h3 {
+            color: var(--accent);
+            margin-bottom: 0.7rem;
+            font-size: 1.2rem;
+        }
+        .feature-card p {
+            font-size: 1rem;
+            color: #444;
+        }
+        .cta {
+            background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+            color: var(--secondary);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-radius: 1.5rem;
+            margin: 2rem auto;
+            max-width: 900px;
+        }
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .cta a {
+            display: inline-block;
+            margin-top: 1rem;
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 0.8rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(255,255,255,0.10);
+            transition: background 0.2s, color 0.2s;
+        }
+        .cta a:hover {
+            background: var(--accent);
+            color: var(--secondary);
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem 0;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 900px) {
+            .hero, .features {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-img {
+                margin-top: 2rem;
+            }
+        }nav {
+            margin-top: 1.5rem;
+        }
+        nav a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #ffe082;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> dr ashraf wasfy HeartCare Clinic</h1>
+        <p>Your Heart, Our Priority</p>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="dr ashrafd clinic.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+           
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <style>
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(90deg, #d32f2f 60%, #1976d2 100%);
+        box-shadow: 0 2px 8px rgba(211,47,47,0.08);
+        border-radius: 0 0 1.2rem 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+        margin: 0;
+        padding: 0.8rem 0;
+    }
+    .navbar li {
+        display: block;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.08rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        padding: 0.5rem 1.2rem;
+        border-radius: 2rem;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        position: relative;
+        z-index: 1;
+    }
+    .navbar a:hover,
+    .navbar a:focus {
+        background: #ffe082;
+        color: #d32f2f;
+        box-shadow: 0 2px 12px rgba(25,118,210,0.10);
+        outline: none;
+    }
+    @media (max-width: 700px) {
+        .navbar ul {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .navbar {
+            border-radius: 0 0 0.7rem 0.7rem;
+            margin-bottom: 1rem;
+        }
+    }
+    </style>
+        </nav> <div class="container">
+        <div class="about-section">
+            <div class="about-text">
+                 <nav>
+            
+        <h2>About Us</h2>
+              <p>
+                    HeartCare Clinic is dedicated to providing exceptional cardiac care with compassion and expertise. 
+                    Our team of experienced cardiologists and healthcare professionals use the latest technology to diagnose, treat, and prevent heart diseases.
+                </p>
+                <div class="values">
+                    <h2>Our Values</h2>
+                    <ul>
+                        <li>Patient-Centered Care</li>
+                        <li>Advanced Cardiac Treatments</li>
+                        <li>Compassion & Empathy</li>
+                        <li>Integrity & Trust</li>
+                        <li>Continuous Innovation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://img.icons8.com/fluency/240/heart-with-pulse.png" alt="Heart Doctor">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
